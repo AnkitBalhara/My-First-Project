@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Meal | Food Ordering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleweb.css">
+    <link rel="stylesheet" href="/css/phone.css">
+    <style>
+        /* *{
+    padding: 0;
+    margin: 0;
+} */
+        .top {
+            display: flex;
+        }
+
+        #upperlogo {
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+        }
+
+        #upperlogo:hover {
+            height: 80px;
+            width: 80px;
+        }
+
+        .top ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #lists li a {
+            font-family: 'Sedgwick Ave Display';
+            color: white;
+            text-decoration: none;
+            margin: 24px;
+            padding: 5px;
+            font-size: 1.5rem;
+        }
+
+        #lists li a:hover {
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .top::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 80px;
+            width: 100vw;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        #content {
+            text-align: center;
+            color: white;
+            font-family: 'Sedgwick Ave Display';
+            padding-top: 35px;
+        }
+
+        .navbar::before {
+            content: "";
+            position: absolute;
+            background: url(https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWF0aW5nJTIwcGl6emF8ZW58MHx8MHx8fDA%3D&w=1000&q=80) no-repeat center center/cover;
+            height: 440px;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #head {
+            color: yellow;
+            font-size: 2.5rem;
+        }
+
+        #onep {
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+
+        button {
+            color: red;
+            font-family: 'Sedgwick Ave Display';
+            font-size: 1.2rem;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        button:hover {
+            background-color: bisque;
+        }
+
+        .top {
+            /* display: flex;
+    align-items: center; */
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        #Service {
+            padding: 18px 0px;
+            width: 100vw;
+            background-color: darkgrey;
+            text-align: center;
+            margin-top: 110px;
+            font-size: 2.5rem;
+            font-family: 'Sedgwick Ave Display';
+            color: red;
+
+        }
+
+        .on {
+            padding-left: 3px;
+        }
+
+        #photo1,
+        #photo2,
+        #photo3 {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            padding: 10px;
+            margin-left: 55px;
+            padding-left: 20px;
+        }
+
+        #item-1,
+        #item-2,
+        #item-3 {
+            border: 2px solid black;
+            border-radius: 20px;
+            margin: 5px;
+            background-color: #cdcbb7;
+        }
+
+        .service {
+            display: flex;
+        }
+
+        .order {
+            background-color: rgb(29, 21, 29);
+            color: chocolate;
+            text-align: center;
+            font-size: 1.6rem;
+            font-family: 'Lobster', cursive;
+        }
+
+        .logoclient {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%
+        }
+
+        #cli {
+            background-image: url(https://media.istockphoto.com/id/859247734/vector/seamless-pizza-slices.jpg?s=612x612&w=0&k=20&c=oYYhWkDwrfd4FjgWnpNS4q57uICwC7PhFAPFap6FMms=);
+        }
+
+        #client {
+            width: 100vw;
+            padding: 18px 0px;
+            color: red;
+            background-color: darkgrey;
+            font-size: 2.5rem;
+            font-family: 'Sedgwick Ave Display';
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact {
+            width: 100vw;
+            padding: 18px 0px;
+            color: red;
+            background-color: darkgrey;
+            margin: 35px 0px;
+            font-size: 2.3rem;
+            text-align: center;
+            font-family: 'Sedgwick Ave Display';
+        }
+
+        /* input[type="text"]{
+    padding-left: 20px;
+}
+
+input[type="number"]{
+    padding-right: 12px;
+} */
+        .one {
+            padding-left: 20px;
+        }
+
+        #two {
+            padding-right: 12px;
+        }
+
+        #action::before {
+            margin-top: -11px;
+            content: "";
+            position: absolute;
+            height: 248px;
+            background: url(https://www.jumboking.co.in/wp-content/uploads/2023/02/Contact-Us-header-image-2048x533.jpg);
+            background-size: cover;
+            width: 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            /* opacity: 0.89; */
+        }
+
+        footer {
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            /* bottom: 0px; */
+            margin-top: 69px;
+            width: 100vw;
+            background-color: black;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            padding: 5px;
+            margin-top: 10px;
+            margin-left: 30px;
+            color: white;
+            background-color: crimson;
+            font-family: math;
+        }
+
+
+
+        @media screen and (min-width:664px) and (max-width:900px) {
+            .service {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 200px;
+                width: 200px;
+                border-radius: 52%;
+                margin-left: 20px;
+                float: right;
+            }
+
+            .navbar::before {
+                height: 488px;
+            }
+
+            #upperlogo:hover {
+                border-radius: 50%;
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        @media screen and (min-width:442px) and (max-width:664px) {
+            .service {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 200px;
+                width: 200px;
+                border-radius: 52%;
+                margin-left: 20px;
+                float: right;
+            }
+
+            #lists li a {
+                font-family: 'Sedgwick Ave Display';
+                color: white;
+                text-decoration: none;
+                margin: 9px;
+                padding: 5px;
+                font-size: 1rem;
+            }
+
+            .navbar::before {
+                height: 519px;
+            }
+
+            #upperlogo {
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+            }
+
+            .top::before {
+                height: 65px;
+            }
+        }
+
+        @media screen and (min-width:300px) and (max-width:442px) {
+            .service {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 200px;
+                width: 200px;
+                border-radius: 52%;
+                margin-left: 20px;
+                float: right;
+            }
+
+            #lists li a {
+                font-family: 'Sedgwick Ave Display';
+                color: white;
+                text-decoration: none;
+                margin: 4px;
+                padding: 2px;
+                font-size: 0.8rem;
+            }
+
+            .navbar::before {
+                height: 582px;
+            }
+
+            .top::before {
+                content: "";
+                background-color: black;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 51px;
+                width: 100vw;
+                z-index: -1;
+                opacity: 0.6;
+            }
+
+            #upperlogo {
+                border-radius: 50%;
+                height: 31px;
+                width: 31px;
+                top: 10px;
+                margin-top: 10px;
+                margin-left: 3px;
+            }
+
+            .order {
+                background-color: #cdcbb7;
+                color: #E64A19;
+                text-align: right;
+                font-size: 0.9rem;
+                /* font-family: 'Lobster', cursive; */
+                display: flex;
+            }
+
+            .on {
+                display: flex;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 121px;
+                margin-top: 3rem;
+                width: 121px;
+                border-radius: 52%;
+                margin-left: 0px;
+                float: left;
+            }
+
+            .logoclient {
+                width: 10rem;
+                border-radius: 50%;
+            }
+
+            #upperlogo:hover {
+                border-radius: 50%;
+                height: 36px;
+                width: 36px;
+            }
+        }
+
+        @media screen and (max-width:300px) {
+            .service {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 200px;
+                width: 200px;
+                border-radius: 52%;
+                margin-left: 20px;
+                float: right;
+            }
+
+            #lists li a {
+                font-family: 'Sedgwick Ave Display';
+                color: white;
+                text-decoration: none;
+                margin: 4px;
+                padding: 2px;
+                font-size: 0.8rem;
+            }
+
+            .navbar::before {
+                height: 582px;
+            }
+
+            .top::before {
+                content: "";
+                background-color: black;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 51px;
+                width: 100vw;
+                z-index: -1;
+                opacity: 0.6;
+            }
+
+            #upperlogo {
+                border-radius: 50%;
+                height: 31px;
+                width: 31px;
+                top: 10px;
+                margin-top: 10px;
+                margin-left: 3px;
+            }
+
+            .order {
+                background-color: #cdcbb7;
+                color: #E64A19;
+                text-align: right;
+                font-size: 0.9rem;
+                /* font-family: 'Lobster', cursive; */
+                display: flex;
+            }
+
+            .on {
+                display: flex;
+            }
+
+            #photo1,
+            #photo2,
+            #photo3 {
+                height: 121px;
+                margin-top: 3rem;
+                width: 121px;
+                border-radius: 52%;
+                margin-left: 0px;
+                float: left;
+            }
+
+            .logoclient {
+                width: 10rem;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="top">
+            <div id="nav">
+                <img id="upperlogo"
+                    src="https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-pizza-logo-design-png-image_5683063.png"
+                    alt="Our Logo">
+            </div>
+            <ul id="lists">
+                <li><a href="#">Home</a> </li>
+                <li><a href="#Service">Services</a></li>
+                <li><a href="#client">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <section id="content">
+            <h1 id="head">Welcome to the Pizza Wing.</h1>
+            <p id="onep">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatibus alias
+                quisquam ad
+                delectus nesciunt vero quis, fugiat asperiores excepturi consequuntur quod molestias ipsam culpa,
+                maiores iusto, accusantium error ex.</p>
+            <button>Order Now</button>
+        </section>
+        <section>
+            <h1 id="Service">Our Services</h1>
+            <div class="service">
+                <div class="item" id="item-1">
+                    <div>
+                        <img id="photo1" src="photo1.jpg" alt="photo">
+                    </div>
+                    <h3 class="order">Food Catering</h3>
+                    <p class="on">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt libero vitae
+                        eligendi
+                        modi
+                        dolorem illum magnam totam velit beatae suscipit, cum labore expedita. Dolorum quo facere quos
+                        aliquid quis.</p>
+                </div>
+                <div class="item" id="item-2">
+                    <div>
+                        <img id="photo2" src="https://m.media-amazon.com/images/I/8113FUsejEL.jpg" alt="Photo">
+                    </div>
+                    <h3 class="order">
+                        Bulk Ordering
+                    </h3>
+                    <p class="on">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab in a perferendis commodi
+                        quasi enim
+                        dolore facilis, atque inventore iste quis quia cum sequi similique tempora adipisci magni quos
+                        nostrum.</p>
+                </div>
+                <div class="item" id="item-3">
+                    <div>
+                        <img id="photo3"
+                            src="https://png.pngtree.com/png-clipart/20210620/original/pngtree-delivery-man-with-scooter-and-pizza-design-png-image_6448120.jpg"
+                            alt="Delivery">
+                    </div>
+                    <h3 class="order">Food Ordering</h3>
+                    <p class="on">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, obcaecati ad. Id
+                        ducimus atque
+                        aperiam molestias omnis, fugiat amet quibusdam vitae animi assumenda adipisci error eius totam
+                        nihil
+                        facilis nesciunt?</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="clients">
+                <h1 id="client">Our Clients</h1>
+                <p id="cli">
+                    <img class="logoclient" id="logoclient1"
+                        src="https://animationvisarts.com/wp-content/uploads/2016/10/airtel-logo-design.jpg"
+                        alt="Clients">
+                    <img class="logoclient" id="logoclient2"
+                        src="https://logos-world.net/wp-content/uploads/2020/11/Hewlett-Packard-Logo-2008-2014.png"
+                        alt="Clients">
+                    <img class="logoclient" id="logoclient3"
+                        src=https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png alt="Clients">
+                    <img class="logoclient" id="logoclient4"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSojMRSStXQaL3Ayzra5bEImh76zSxVZKJF7g&usqp=CAU"
+                        alt="Clients">
+                    <img class="logoclient" id="logoclient5"
+                        src="https://animationvisarts.com/wp-content/uploads/2016/10/tata-logo-design.jpg"
+                        alt="Clients">
+                </p>
+            </div>
+        </section>
+        <section id="last">
+            <div id="contact">
+                Contact Us
+            </div>
+            <div id="action">
+                <form action="no.py">
+                    <label class="one" for="Name">Name : <input type="text" placeholder="Enter Your Name"></label>
+                    <label class="one" for="Email">Email : <input type="text" placeholder="Enter Your Email"></label>
+                    <label id="two" for="Phone No">Phone No. : <input type="number"
+                            placeholder="Enter your Number"></label>
+                    <label for="Location">Location : <input type="Location" placeholder="Locality"></label>
+                    <label for="textarea">Message : <textarea name="message" placeholder="Message for Feedback"
+                            id="message" cols="20" rows="2"></textarea></label>
+                    <label for="submit"><button class="btn">Submit</button></label>
+                </form>
+
+            </div>
+
+        </section>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.OnlineMeal.com. All rights reserved!
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+</script>
+
+</html>
